@@ -5,7 +5,7 @@ import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry.js";
 import * as dat from "lil-gui";
 import { gsap } from "gsap/all";
 
-const gui = new dat.GUI();
+// const gui = new dat.GUI();
 
 const canvas = document.querySelector("canvas.webgl");
 
@@ -137,7 +137,7 @@ const camera = new THREE.PerspectiveCamera(
 );
 camera.position.x = 1;
 camera.position.y = 1;
-camera.position.z = 2;
+camera.position.z = window.innerWidth < 768 ? 7 : 2;
 scene.add(camera);
 
 const controls = new OrbitControls(camera, canvas);
