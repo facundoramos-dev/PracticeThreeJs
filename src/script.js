@@ -16,19 +16,6 @@ const matcapTexture = textureLoader.load("textures/matcaps/8.png");
 
 const fontLoader = new FontLoader();
 
-// const material = new THREE.MeshMatcapMaterial({ matcap: matcapTexture });
-// const donutGeometry = new THREE.TorusGeometry(0.3, 0.2, 32, 64);
-// const donut = new THREE.Mesh(donutGeometry, material);
-// scene.add(donut);
-
-// console.log("donut: ", donut.position);
-// gsap.to(donut.rotation, {
-//   x: Math.PI,
-//   duration: 5,
-//   repeat: -1,
-//   ease: "none",
-// });
-
 fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
   const textConfig = {
     font: font,
@@ -68,7 +55,6 @@ fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
   //   yoyo: true,
   // });
   const box = textGeometry2.boundingBox.max.x * 2;
-  console.log("GEOM", textGeometry1.boundingBox.max);
 
   text2.position.x = -box / 2;
   text3.position.x = -box * 1.75;
@@ -83,7 +69,6 @@ fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
   // gui.add(text2.position, "y", -box * 4, box, box);
   // gui.add(text3.position, "y", -box * 4, box, box);
   // gui.add(text4.position, "y", -box * 4, box, box);
-  console.log("group: ", group);
 
   scene.add(group);
 
